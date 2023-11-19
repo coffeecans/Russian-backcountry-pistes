@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>Top 12 mountain destination</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no'/>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.11.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.11.0/mapbox-gl.css' rel='stylesheet'/>
+    <link href='https://www.mapbox.com/base/latest/base.css' rel='stylesheet'/>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: block;
+            height: 100%;
+        }
+
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <style>
+
+        .t-prefix_3 {
+            padding-left: calc(300px - 3%);
+        }
+
+        @media screen and (max-width: 1200px) {
+            .t-prefix_3 {
+                padding-left: calc(240px - 3%;
+            }
+        }
+
+        .t-col_6 {
+            max-width: calc(560px + 3%);
+        }
+
+        .t-width_6 {
+            max-width: calc(560px + 3%);
+        }
+
+        @media screen and (max-width: 1200px) {
+
+            .t-col_6 {
+                max-width: calc(460px + 3%);
+            }
+
+            .t-width_6 {
+                max-width: calc(460px + 3%);
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v0.1.0/mapbox-gl-geocoder.js'></script>
+<link rel='stylesheet'
+      href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v0.1.0/mapbox-gl-geocoder.css'
+      type='text/css'/>
+<div class='col12 fill-grey'>
+    <style>
+        #geocoder-container {
+            position: absolute;
+            top: 0;
+            width: 200px;
+            margin-top: 10px;
+        }
+
+        #geocoder-container > div {
+            margin-left: 25%;
+        }
+    </style>
+
+    <div id='map'></div>
+
+    <div id='geocoder-container'></div>
+
+    <div class='col4 fill-lighten3 pin-right scroll-styled hide-mobile clearfix'>
+        <div class='col12 pad2 fill-light'><h2>Russian backcountry pistes</h2></div>
+        <div class='col12 pad2 prose fill-lighten1'>Russian backcountry pistes</div>
+        <div class='pill pad2 mobile-cols clearfix'><!--
+      --><a href='#' onclick='fly(id);' id='sochi' class='fr col12 button'>Sochi</a><!--
+      --><a href='#' onclick='fly(id);' id='cheget' class='fr col12 button'>Cheget</a><!--
+      --><a href='#' onclick='fly(id);' id='donbai' class='fr col12 button'>Donbai</a><!--
+	  --><a href='#' onclick='fly(id);' id='abzakovo' class='fr col12 button'>Abzakovo</a><!--
+    --></div>
+    </div>
+
+
+    <div class="t218">
+        <div class="t218__blockimgmobile" style="display:none;background-color:#f0f0f0;"><img
+                src="https://static.tildacdn.com/ec9e06c9-c5dd-4f21-bd53-1737441eafc6/2e9b0cb2.jpg"
+                class="t218__imgmobile"></div>
+        <table class="t218__blocktable" style="height:100vh;background-color:#f0f0f0;" data-height-correct-vh="yes">
+            <tbody>
+            <tr>
+                <td class="t218__blockimg" bgimgfiled="img"
+                    style="background-image:url('https://static.tildacdn.com/tild3830-6262-4863-b337-613332376637/Bitmap.png');"></td>
+                <td class="t218__blocktext">
+                    <div class="t218__textwrapper">
+                        <div class="t218__descrfield t-descr t-descr_xxxl" field="title">Simplicity is the
+                            by-product of a good idea and modest expectations.
+                        </div>
+                        <div class="t218__textfield t-text t-text_md" field="text">Before incorporating visual aids
+                            into speeches, the speaker should understand that if used incorrectly,
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <!--div class='pin-top pad8y space-top8 space-left8 show-mobile'>
+        <div class='col12 pad2 fill-light'><h2>Top 3 mountain destinations</h2></div>
+        <div class='pill col6'><!--
+          <a href='#' onclick='fly(id);' id='bre' class='fr button'>Breckenridge Ski Resort, Breckenridge, Colorado</a><!--
+          <a href='#' onclick='fly(id);' id='key' class='fr button'>Keystone Resort, Keystone, Colorado</a><!--
+          <a href='#' onclick='fly(id);' id='aft' class='fr button'>Afton Alps, Hastings, Minnesota</a><!--
+          </div>
+      </div-->
+
+
+</div>
+
+
+<br/>
+
+<script>
+    $("a").click(function () {
+        if ($('a').hasClass('fill-green')) {
+            $('a').removeClass('fill-green');
+            $(this).addClass('fill-green');
+        } else {
+            $(this).addClass('fill-green');
+        }
+    });
+</script>
+
+<script src="static.js"></script>
+</body>
+</html>
